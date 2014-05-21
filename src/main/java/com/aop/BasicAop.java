@@ -10,13 +10,14 @@ import org.springframework.stereotype.Component;
 
 /**
  * Created by Administrator on 5/21/2014.
+ * Copyright Vale Inc.
  */
 @Aspect
 @Component
 public class BasicAop extends  abstractAop {
 
     Logger log= LoggerFactory.getLogger(this.getClass());
-    @Pointcut("execution(* *Controller*(..))")
+    @Pointcut("execution(* *Welcome*(..))")
     public void controllerMethods(){};
 
     @Around("inServiceLayer() && controllerMethods()")

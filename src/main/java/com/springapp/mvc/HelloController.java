@@ -13,4 +13,10 @@ public class HelloController {
 		model.addAttribute("message", "Hello world!");
 		return "hello world ...";
 	}
+
+        @RequestMapping(method = RequestMethod.GET)
+        public String reprintWelcome(ModelMap model) {
+            model.addAttribute("message", "Hello world!");
+            return "hello world ...";
+        }
 }
